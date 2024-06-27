@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "./libs/lenis";
 import Navbar from "./Components/Navbar/Navbar";
-
-const inter = Inter({ subsets: ["latin"] });
+import { spaceGrotesk } from "./libs/fonts/fonts";
 
 export const metadata: Metadata = {
   title: "Dermatology Test Website - Jagrath LXIX",
@@ -18,10 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <ReactLenis root>
-      <html lang="en">
-        <body className={inter.className}>
+      <html lang="en" className={spaceGrotesk.className}>
+        <body>
           <Navbar />
-
           {children}
         </body>
       </html>
