@@ -1,40 +1,85 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import HeroImage from "@/public/images/hero_section/heroImage.jpg";
+import { useScroll, useTransform, motion, easeInOut } from "framer-motion";
+import { editorial } from "@/app/libs/fonts/localFonts";
+import ArrowIcon from "../Icons/ArrowIcon";
+import Link from "next/link";
 
 type Props = {};
 
 function Hero({}: Props) {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const width = useTransform(scrollYProgress, [0, 0.7], ["30%", "100%"], {
+    ease: easeInOut,
+  });
+  const height = useTransform(scrollYProgress, [0, 0.7], ["100%", "300%"], {
+    ease: easeInOut,
+  });
+
+  // useMotionValueEvent(scrollYProgress, "change", (latest) => {
+  //   console.log("Page scroll: ", latest);
+  // });
+
   return (
     <div className="w-full min-h-screen">
-      <div className="w-full h-[150vh]">
+      <div className="w-full min-h-[150vh] overflow-clip" ref={containerRef}>
         <div className="w-full h-screen sticky top-0 flex flex-col justify-end ">
           {/* Bottom Half */}
-          <div className="h-[50vh] w-full flex justify-center items-center relative">
+          <div className="min-h-[50vh] w-full flex justify-center items-center relative">
             {/* Text Block */}
-            <div className="w-4/12 h-[40vh] absolute -top-[10rem] flex flex-col items-center justify-start z-40">
-              <h1 className="text-8xl text-black mix-blend-difference">
-                Helios
+            <div
+              className={`${editorial.className} z-20 w-10/12 h-fit p-2 absolute -top-[45%] flex flex-col items-center justify-start`}
+            >
+              <h1 className="text-9xl text-zinc-900 font-thin tracking-wide">
+                HELIOS
               </h1>
-              <h1 className="text-8xl text-black mix-blend-color-dodge">
-                Dermatologists
+              <h1 className="text-9xl text-zinc-900 font-thin tracking-wide">
+                DERMATOLOGY
               </h1>
             </div>
 
             {/* Image */}
-            <div className="z-30 h-full w-4/12 relative">
+            <motion.div
+              style={{ width, height }}
+              className="h-[300%] w-4/12 relative"
+            >
               <Image
                 src={HeroImage}
                 alt="Image of a Woman with clear skin"
                 fill
-                className="object-cover"
+                priority
+                // sizes="90vw"
+                className="object-cover -z-10"
+                placeholder="blur"
               />
-            </div>
+            </motion.div>
+
+            {/* TODO: book now */}
+            <Link href="" className="group">
+              <div className="w-2/12 h-1/4  absolute right-10 flex items-center justify-center z-10">
+                <div className="absolute left-0 bg-emerald-200 rounded-full w-28 h-28 group-hover:w-full transform duration-300 z-10 group-hover:cursor-pointer"></div>
+                <p
+                  className={`${editorial.className} text-3xl flex justify-center space-x-2 z-20`}
+                >
+                  <span className="group-hover:cursor-pointer">
+                    Book a Session
+                  </span>
+                  <span className="flex items-center justify-center">
+                    <ArrowIcon className="size-7 text-zinc-800 group-hover:cursor-pointer" />
+                  </span>
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
-
-      <div className="w-full bg-black h-[500vh]"></div>
     </div>
   );
 }
