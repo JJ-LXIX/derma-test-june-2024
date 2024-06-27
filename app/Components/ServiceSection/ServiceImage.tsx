@@ -48,8 +48,6 @@ function ServiceImage({ imageNumber }: Props) {
         fill
         className="object-cover z-30"
         sizes="40vw"
-        priority
-        placeholder="blur"
       />
     </motion.div>
   );
