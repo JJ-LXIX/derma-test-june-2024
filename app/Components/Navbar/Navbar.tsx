@@ -65,12 +65,14 @@ export default function Navbar({}: Props) {
               <ul className="w-full h-full flex  justify-around items-center">
                 {nav_links.map((nav_link) => {
                   return (
-                    <li key={nav_link.href}>
+                    <li key={nav_link.href} className="group">
                       <Link
                         href={nav_link.href}
-                        className="font-medium text-xl uppercase cursor-pointer transition-all"
+                        className="font-medium text-xl uppercase cursor-pointer relative"
                       >
                         {nav_link.link_name}
+                        <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-zinc-800 duration-300 group-hover:w-3/6"></span>
+                        <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-zinc-800 duration-300 group-hover:w-3/6"></span>
                       </Link>
                     </li>
                   );
