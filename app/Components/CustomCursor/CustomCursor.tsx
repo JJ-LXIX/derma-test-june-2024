@@ -14,7 +14,7 @@ function CustomCursor({}: Props) {
       <motion.div
         style={{ left: smoothX, top: smoothY }}
         animate="default"
-        className="pointer-events-none fixed top-0 z-50 h-14 w-14 overflow-hidden rounded-full bg-sky-600 mix-blend-difference"
+        className="pointer-events-none fixed top-0 z-50 h-14 w-14 overflow-hidden rounded-full bg-pink-950 mix-blend-difference"
       ></motion.div>
       <motion.div
         style={{ left: x, top: y }}
