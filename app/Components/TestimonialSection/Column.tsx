@@ -27,7 +27,7 @@ export default function Column({ reviews, y }: Props) {
             <div className="flex h-full w-full flex-col">
               {/* Review Text */}
               <div className="flex h-4/6 w-full items-center p-2 text-black text-center text-2xl xl:px-4 2xl:text-3xl">
-                "{review.review}"
+                {review.review}
               </div>
               {/* Image and Name */}
               <div className="flex h-3/6 w-full flex-col items-center justify-center space-y-4">

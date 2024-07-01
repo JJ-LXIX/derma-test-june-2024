@@ -7,20 +7,17 @@ import Male1 from "@/public/images/testimonial people/male3.jpg";
 const reviews = [
   {
     name: "Alice Johnson",
-    review:
-      "I had a wonderful experience at Washington Dental Clinic with Dr. Smith. Highly recommended for all your dental needs.",
+    review: `"I had a wonderful experience at Washington Dental Clinic with Dr. Smith. Highly recommended for all your dental needs."`,
     image: Female1,
   },
   {
     name: "Bob Miller",
-    review:
-      "Dr. Smith and the team at Washington Dental Clinic are friendly, professional, and provide top-notch care. Great experience!",
+    review: `"Dr. Smith and the team at Washington Dental Clinic are friendly, professional, and provide top-notch care. Great experience!"`,
     image: Male1,
   },
   {
     name: "Caroline Davis",
-    review:
-      "My family loves Washington Dental Clinic. Dr. Smith is fantastic, and the staff is always welcoming. A great dental practice!",
+    review: `"My family loves Washington Dental Clinic. Dr. Smith is fantastic, and the staff is always welcoming. A great dental practice!"`,
     image: Female2,
   },
 ];
@@ -40,7 +37,7 @@ function SmallScreenTestimonial({}: Props) {
               <div className="flex h-full w-full flex-col space-y-5">
                 {/* Review Text */}
                 <div className="flex h-4/6 w-full items-center p-2 ">
-                  "{review.review}"
+                  {review.review}
                 </div>
                 {/* Image and Name */}
                 <div className="flex h-2/6 w-full md:space-x-2">

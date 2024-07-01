@@ -22,74 +22,62 @@ type Props = {};
 const reviews = [
   {
     name: "Eleanor White",
-    review:
-      "Dr. Smith is a skilled dermatologist. I'm impressed with the care I received at Helios Dermatology.",
+    review: `"Dr. Smith is a skilled dermatologist. I'm impressed with the care I received at Helios Dermatology."`,
     image: Female1,
   },
   {
     name: "Henry Adams",
-    review:
-      "The team at Helios Dermatology is outstanding. Dr. Smith's expertise shines through. Highly recommended!",
+    review: `"The team at Helios Dermatology is outstanding. Dr. Smith's expertise shines through. Highly recommended!"`,
     image: Male1,
   },
   {
     name: "Olivia Turner",
-    review:
-      "Friendly, professional, and caring. Dr. Smith and the staff at Helios Dermatology are top-notch. Great experience!",
+    review: `"Friendly, professional, and caring. Dr. Smith and the staff at Helios Dermatology are top-notch. Great experience!"`,
     image: Female2,
   },
   {
     name: "William Parker",
-    review:
-      "My family trusts Dr. Smith at Helios Dermatology. Always a welcoming atmosphere. A fantastic dermatology practice!",
+    review: `"My family trusts Dr. Smith at Helios Dermatology. Always a welcoming atmosphere. A fantastic dermatology practice!"`,
     image: Male2,
   },
   {
     name: "Sophia Hall",
-    review:
-      "Dr. Smith transformed my skin at Helios Dermatology. The results speak for themselves. Thank you!",
+    review: `"Dr. Smith transformed my skin at Helios Dermatology. The results speak for themselves. Thank you!"`,
     image: Female3,
   },
   {
     name: "Lucas Brooks",
-    review:
-      "I had a pleasant experience with Dr. Smith at Helios Dermatology. Highly skilled and attentive to patients.",
+    review: `"I had a pleasant experience with Dr. Smith at Helios Dermatology. Highly skilled and attentive to patients."`,
     image: Male3,
   },
   {
     name: "Ava Mitchell",
-    review:
-      "Helios Dermatology Kids is wonderful. Dr. Smith makes pediatric dermatology fun for children. My kids love it here!",
+    review: `"Helios Dermatology Kids is wonderful. Dr. Smith makes pediatric dermatology fun for children. My kids love it here!"`,
     image: Female4,
   },
   {
     name: "Noah Green",
-    review:
-      "Emergency care was swift and professional at Helios Dermatology. Dr. Smith and the team exceeded my expectations.",
+    review: `"Emergency care was swift and professional at Helios Dermatology. Dr. Smith and the team exceeded my expectations."`,
     image: Male4,
   },
   {
     name: "Emma Foster",
-    review:
-      "Dr. Smith's work at Helios Dermatology is amazing. I'm thrilled with my clear, healthy skin!",
+    review: `"Dr. Smith's work at Helios Dermatology is amazing. I'm thrilled with my clear, healthy skin!"`,
     image: Female5,
   },
   {
     name: "Liam Walker",
-    review:
-      "A big thank you to Dr. Smith and the team at Helios Dermatology for their exceptional care and service.",
+    review: `"A big thank you to Dr. Smith and the team at Helios Dermatology for their exceptional care and service."`,
     image: Male5,
   },
   {
     name: "Grace Turner",
-    review:
-      "Dr. Smith is truly a skin wizard. I couldn't be happier with the results from Helios Dermatology.",
+    review: `"Dr. Smith is truly a skin wizard. I couldn't be happier with the results from Helios Dermatology."`,
     image: Female6,
   },
   {
     name: "Mia Rodriguez",
-    review:
-      "Helios Dermatology is a gem. Dr. Smith's attention to detail and patient care are unmatched.",
+    review: `"Helios Dermatology is a gem. Dr. Smith's attention to detail and patient care are unmatched."`,
     image: Female7,
   },
 ];
