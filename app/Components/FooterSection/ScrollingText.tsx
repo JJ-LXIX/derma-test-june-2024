@@ -1,7 +1,7 @@
 type Props = {};
 
 export default function ScrollingText({}: Props) {
-  let arr = Array.from({ length: 10 }, (x, i) => i);
+  let arr = Array.from({ length: 20 }, (x, i) => i);
   return (
     <>
       {arr.map((e, index: number) => {

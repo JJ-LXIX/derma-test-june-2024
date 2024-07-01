@@ -21,9 +21,7 @@ export default function Footer({}: Props) {
         <div className="h-full w-full flex">
           {/* Left */}
           <div className="w-1/6 h-full ">
-            <div className="h-3/4 w-full relative ">
-              <FooterIcon />
-            </div>
+            <div className="h-3/4 w-full relative ">{/* <FooterIcon /> */}</div>
           </div>
           {/* Middle */}
           <div className="w-4/6 h-full pt-0">
