@@ -1,4 +1,5 @@
 import AboutUs from "./Components/AboutUsSection/AboutUs";
+import ContactFormSection from "./Components/ContactFormSection/ContactFormSection";
 import CustomCursor from "./Components/CustomCursor/CustomCursor";
 import Footer from "./Components/FooterSection/Footer";
 import Hero from "./Components/HeroSection/Hero";
@@ -12,11 +13,10 @@ export default function Home() {
       <AboutUs />
       <ServiceSection />
       <TestimonialSection />
-
+      <ContactFormSection />
+      <Footer />
       {/* Custom Cursor */}
       <CustomCursor />
-      <div className="w-full h-[100vh]"></div>
-      <Footer />
     </main>
   );
 }

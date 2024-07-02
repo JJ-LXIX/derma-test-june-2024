@@ -34,6 +34,7 @@ function ServiceImage({ imageNumber }: Props) {
     console.log(latest);
   });
   return (
+    // TODO: make images load faster (maybe preloading)
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
