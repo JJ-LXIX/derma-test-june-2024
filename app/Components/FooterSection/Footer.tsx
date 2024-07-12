@@ -12,7 +12,7 @@ export default function Footer({}: Props) {
   return (
     <div className="h-[40vh] w-full bg-black">
       {/* Top Moving */}
-      <div className="h-1/6 w-full flex animate-loop-scroll space-x-2">
+      <div className="h-1/6 w-full flex animate-loop-scroll space-x-2 overflow-clip">
         <ScrollingText />
       </div>
 
