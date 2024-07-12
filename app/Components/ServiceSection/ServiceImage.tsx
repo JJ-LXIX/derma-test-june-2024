@@ -30,9 +30,6 @@ function ServiceImage({ imageNumber }: Props) {
   const { x, y } = useMouse();
   const rotate = useTransform(x, [300, 1200], ["-10deg", "10deg"]);
 
-  useMotionValueEvent(x, "change", (latest) => {
-    console.log(latest);
-  });
   return (
     // TODO: make images load faster (maybe preloading)
     <motion.div
