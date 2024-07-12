@@ -8,7 +8,7 @@ import TestimonialSection from "./Components/TestimonialSection/TestimonialSecti
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="overflow-clip">
       <Hero />
       <AboutUs />
       <ServiceSection />
