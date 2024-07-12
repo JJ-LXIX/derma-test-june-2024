@@ -5,7 +5,6 @@ import {
   motion,
   AnimatePresence,
 } from "framer-motion";
-import { NextFont } from "next/dist/compiled/@next/font";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -49,18 +48,27 @@ export default function Navbar({}: Props) {
       <motion.nav
         variants={navVariants}
         animate={hidden ? "hidden" : "visible"}
-        className="fixed top-0 right-0 left-0 z-50 bg-[#f8f3ef]"
+        className="fixed top-0 w-full z-50 bg-[#f8f3ef]"
       >
-        <div className={`h-20 border-b border-black w-full flex`}>
+        <div
+          className={`h-16 xl:h-20 px-10 xl:px-0 border-b border-black w-full flex justify-between items-center xl:justify-normal xl:items-center`}
+        >
           {/* Logo */}
           <div className="w-1/12 h-full flex justify-center items-center">
-            <Link href="/" className="text-4xl font-medium cursor-pointer">
+            <Link
+              href="/"
+              className="text-xl 2xl:text-4xl font-medium cursor-pointer"
+            >
               LOGO
             </Link>
           </div>
 
-          {/* Links */}
-          <div className="w-11/12 h-full flex justify-end">
+          {/* Links Mobile/Tab */}
+          {/* TODO: finish mobile nav */}
+          <div className="lg:hidden">3 lines</div>
+
+          {/* Links Laptop+ */}
+          <div className="w-11/12 h-full  justify-end hidden xl:flex">
             <div className="w-6/12 h-full">
               <ul className="w-full h-full flex  justify-around items-center">
                 {nav_links.map((nav_link) => {
