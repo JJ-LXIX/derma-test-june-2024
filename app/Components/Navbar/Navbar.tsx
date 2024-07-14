@@ -7,14 +7,15 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
+import HamburgerButton from "./HamburgerButton";
 
 type Props = {};
 
 const nav_links = [
-  { link_name: "our work", href: "work" },
-  { link_name: "locations", href: "locations" },
-  { link_name: "about", href: "about" },
-  { link_name: "contact", href: "contact" },
+  { link_name: "our work", href: "pages/work" },
+  { link_name: "locations", href: "pages/locations" },
+  { link_name: "about", href: "pages/about" },
+  { link_name: "contact", href: "#contact" },
 ];
 
 const navVariants = {
@@ -48,7 +49,7 @@ export default function Navbar({}: Props) {
       <motion.nav
         variants={navVariants}
         animate={hidden ? "hidden" : "visible"}
-        className="fixed top-0 w-full z-50 bg-[#f8f3ef]"
+        className="fixed top-0 w-full z-[99999] bg-[#f8f3ef]"
       >
         <div
           className={`h-16 xl:h-20 px-10 xl:px-0 border-b border-black w-full flex justify-between items-center xl:justify-normal xl:items-center`}
@@ -65,7 +66,9 @@ export default function Navbar({}: Props) {
 
           {/* Links Mobile/Tab */}
           {/* TODO: finish mobile nav */}
-          <div className="lg:hidden">3 lines</div>
+          <div className="lg:hidden w-7 h-7">
+            <HamburgerButton nav_links={nav_links} />
+          </div>
 
           {/* Links Laptop+ */}
           <div className="w-11/12 h-full  justify-end hidden xl:flex">
