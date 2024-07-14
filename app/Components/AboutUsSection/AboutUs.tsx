@@ -57,7 +57,7 @@ function AboutUs({}: Props) {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
                 viewport={{ margin: marginFromTop, once: true }}
-                className="text-4xl lg:text-6xl font-normal text-zinc-900 text-pretty leading-tight tracking-tight"
+                className="text-4xl lg:text-6xl font-normal text-zinc-900 text-center lg:text-left text-pretty leading-tight tracking-tight"
               >
                 Expert skin care with advanced treatments and a patient-centered
                 approach.

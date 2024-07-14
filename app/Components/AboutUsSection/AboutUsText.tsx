@@ -39,8 +39,8 @@ const defaultAnimations2 = {
 function AboutUsText({ heading, para }: Props) {
   return (
     <div className="w-full min-h-[16rem] mb-5 lg:min-h-[20rem]">
-      <div className="w-full h-2/4 flex items-end lg:items-start overflow-hidden">
-        <p className=" text-7xl lg:text-[8rem] font-semibold text-zinc-900">
+      <div className="w-full h-2/4 flex justify-center lg:justify-normal items-end lg:items-start overflow-hidden ">
+        <p className="text-7xl lg:text-[8rem] font-semibold text-zinc-900 ">
           <span className="sr-only">{heading}</span>
           <motion.span
             aria-hidden
@@ -61,7 +61,7 @@ function AboutUsText({ heading, para }: Props) {
           </motion.span>
         </p>
       </div>
-      <div className="w-full h-2/4">
+      <div className="w-full h-2/4 flex justify-center lg:block">
         <motion.p
           variants={defaultAnimations2}
           initial="hidden"
