@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Female1 from "@/public/images/testimonial people/female2.jpg";
 import Female2 from "@/public/images/testimonial people/female6.jpg";
-
 import Male1 from "@/public/images/testimonial people/male3.jpg";
+
+import { motion } from "framer-motion";
 
 const reviews = [
   {
@@ -22,17 +23,36 @@ const reviews = [
   },
 ];
 
+const defaultAnimations = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+      duration: 0.6,
+    },
+  },
+};
+
 type Props = {};
 
 function SmallScreenTestimonial({}: Props) {
   return (
-    <div className="min-h-screen w-full bg-[#141414] pb-10 md:min-h-[30vh] md:pb-20">
-      <div className="flex min-h-screen w-full flex-col items-center space-y-2 md:min-h-[30vh] md:flex-row md:justify-around md:space-y-0  md:pb-20">
+    <div className="min-h-screen w-full pb-10 md:min-h-[30vh] md:pb-20">
+      <div className="flex min-h-screen w-full flex-col items-center space-y-10 md:min-h-[30vh] md:flex-row md:justify-around md:space-y-0  md:pb-20">
         {reviews.map((review) => {
           return (
-            <div
+            <motion.div
+              variants={defaultAnimations}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ margin: "-100px", once: true }}
               key={review.name}
-              className="w-3/4 overflow-hidden rounded-2xl bg-zinc-100 p-5 py-8 md:h-[25vh] md:w-[30%]"
+              className="w-3/4 overflow-hidden rounded-2xl bg-zinc-50 shadow-lg p-5 py-8 md:h-[25vh] md:w-[30%]"
             >
               <div className="flex h-full w-full flex-col space-y-5">
                 {/* Review Text */}
@@ -40,9 +60,9 @@ function SmallScreenTestimonial({}: Props) {
                   {review.review}
                 </div>
                 {/* Image and Name */}
-                <div className="flex h-2/6 w-full md:space-x-2">
+                <div className="flex h-2/6 w-full md:space-x-2 ">
                   <div className="flex h-full w-2/6 items-center justify-center">
-                    <div className="relative h-16 w-16 overflow-hidden rounded-full bg-black">
+                    <div className="relative h-16 w-16 overflow-hidden rounded-full">
                       <Image
                         src={review.image}
                         alt="image of person smiling with nice teeth"
@@ -53,12 +73,12 @@ function SmallScreenTestimonial({}: Props) {
                       />
                     </div>
                   </div>
-                  <div className="flex h-full w-4/6 items-center text-xl font-semibold ">
+                  <div className="flex h-full w-4/6 items-center text-xl font-semibold self-center">
                     {review.name}
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>
