@@ -22,7 +22,7 @@ export default function Column({ reviews, y }: Props) {
         return (
           <div
             key={index}
-            className="relative h-full w-full overflow-hidden rounded-lg bg-zinc-50"
+            className="relative h-full w-full overflow-hidden rounded-xl shadow-lg bg-zinc-50"
           >
             <div className="flex h-full w-full flex-col">
               {/* Review Text */}
