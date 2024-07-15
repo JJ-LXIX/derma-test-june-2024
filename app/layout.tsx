@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ReactLenis } from "./libs/lenis";
 import Navbar from "./Components/Navbar/Navbar";
 import { spaceGrotesk } from "./libs/fonts/fonts";
+import { ReactLenis } from "@/app/libs/lenis";
 import CustomCursor from "./Components/CustomCursor/CustomCursor";
 
 export const metadata: Metadata = {
@@ -16,14 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ReactLenis root>
-      <html lang="en" className={spaceGrotesk.className}>
-        <body>
+    <html lang="en">
+      <ReactLenis root>
+        <body className={spaceGrotesk.className}>
           <Navbar />
           <CustomCursor />
           {children}
         </body>
-      </html>
-    </ReactLenis>
+      </ReactLenis>
+    </html>
   );
 }
