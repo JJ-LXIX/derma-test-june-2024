@@ -26,14 +26,10 @@ function Hero({}: Props) {
   //       ease: easeInOut,
   //     });
 
-  let width1 = useTransform(scrollYProgress, [0, 0.7], ["65%", "100%"], {
+  let widthArr = isSmallScreen ? ["65%", "100%"] : ["30%", "100%"];
+  let width = useTransform(scrollYProgress, [0, 0.7], widthArr, {
     ease: easeInOut,
   });
-  let width2 = useTransform(scrollYProgress, [0, 0.7], ["30%", "100%"], {
-    ease: easeInOut,
-  });
-
-  let width = isSmallScreen ? width1 : width2;
 
   const height = useTransform(scrollYProgress, [0, 0.7], ["100%", "300%"], {
     ease: easeInOut,
