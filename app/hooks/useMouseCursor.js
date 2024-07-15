@@ -33,7 +33,7 @@ export default function useMousePosition() {
     window.addEventListener("mousemove", manageMouseMove);
 
     return () => window.removeEventListener("mousemove", manageMouseMove);
-  }, []);
+  });
 
   return [mouse2, smoothMouse];
 }
